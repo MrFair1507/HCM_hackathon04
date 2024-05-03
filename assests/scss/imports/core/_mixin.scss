@@ -1,0 +1,37 @@
+@mixin txt($fsize:14px, $fweight:700,$lheight:21px ,$color:#fff){
+font-size: $fsize;
+font-weight: $fweight;
+line-height: $lheight;
+color: $color;
+}
+@mixin fcol($direction: column, $content: null, $gap: 16px, $items: center ){
+    display: flex;
+    flex-direction: $direction ;
+    justify-content: $content ;
+    gap: $gap;
+    align-items: $items;
+}
+@mixin txtr1{
+    display:-webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+@mixin txtr2{
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+@mixin txtr3{
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
