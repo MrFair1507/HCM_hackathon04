@@ -91,6 +91,7 @@
           width: 502px;
           .banner__title {
             @include txt(64px, 800, normal, #353945);
+            @include txtr2();
             font-family: $font-family;
             text-align: left;
 
@@ -105,6 +106,7 @@
           }
           .banner__desc {
             @include txt(18px, 500, 28px, #777e90);
+            @include txtr2();
             font-family: $font-family;
             max-width: 455px;
             text-align: left;
@@ -200,7 +202,11 @@
     .banner__content-right {
       // width: 100%;
       .banner__img {
-        object-fit: cover;
+        img {
+          width: 967px;
+          height: 645px;
+          object-fit: cover;
+        }
       }
     }
   }
@@ -209,6 +215,7 @@
   padding: 70px 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #f4f5f9;
   .partners__list {
     display: flex;
@@ -218,12 +225,15 @@
 }
 .tripplanning {
   display: flex;
+  // justify-content: center;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  padding: 70px;
+  padding: 70px 0;
   .tripplan {
     display: flex;
     flex-direction: column;
+
     gap: 50px;
     .tripplan__header {
       display: flex;
@@ -233,11 +243,13 @@
       text-align: center;
       .tripplan__header-title {
         @include txt(40px, 700, 60px, #23262f);
+        @include txtr1();
         letter-spacing: -0.4px;
         font-family: $font-family;
       }
       .tripplan__header-text {
         @include txt(18px, 400, 32px, #353945);
+        @include txtr2();
         max-width: 461px;
         font-family: $font-family;
       }
@@ -257,6 +269,9 @@
           width: 201px;
           font-family: $font-family;
           text-align: center;
+          p {
+            @include txtr3();
+          }
         }
         .tripplan__card1-more {
           display: flex;
@@ -276,6 +291,9 @@
           width: 210px;
           font-family: $font-family;
           text-align: center;
+          p {
+            @include txtr3();
+          }
         }
         .tripplan__card2-more {
           display: flex;
@@ -295,6 +313,9 @@
           width: 172px;
           font-family: $font-family;
           text-align: center;
+          p {
+            @include txtr3();
+          }
         }
         .tripplan__card3-more {
           display: flex;
@@ -309,6 +330,7 @@
 .bookstep {
   .bookstep__block {
     padding: 69px 0;
+    gap: 102px;
     display: flex;
     justify-content: space-between;
   }
@@ -440,180 +462,199 @@
           margin-bottom: 26px;
           .bookstep__right-text {
             display: flex;
-            width: 538px;
+            max-width: 538px;
             flex-direction: column;
             align-items: flex-start;
             gap: 24px;
             .bookstep__right-easy {
               @include txt(40px, 700, 60px, #23262f);
+              @include txtr1();
               font-family: $font-family;
               letter-spacing: -0.4px;
             }
             .bookstep__right-desc {
               @include txt(14px, 500, 20px, #353945);
+              @include txtr3();
+              max-width: 538px;
               font-family: $font-family;
               text-align: left;
             }
           }
-          .bookstep__right-menu {
+        }
+        .bookstep__right-menu {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20px;
+          .bookstep__right-choice {
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             gap: 20px;
-            .bookstep__right-choice {
-              display: flex;
-              align-items: center;
-              gap: 20px;
-              .bookstep__right-choice-for {
-                @include txt(16px, 700, 24px, #353945);
-                font-family: $font-family;
-              }
+            .bookstep__right-choice-for {
+              @include txt(16px, 700, 24px, #353945);
+              @include txtr1();
+              font-family: $font-family;
             }
           }
         }
-        .bookstep__right-advice {
-          @include txt(16px, 400, 24px, #353945);
-          font-family: $font-family;
-        }
+      }
+      .bookstep__right-advice {
+        @include txt(16px, 400, 24px, #353945);
+        @include txtr2();
+        font-family: $font-family;
       }
     }
-    .bookstep__right-bottom {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      .bookstep__right-ava {
+  }
+  .bookstep__right-bottom {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    .bookstep__right-ava {
+      img {
         width: 70px;
         height: 70px;
         object-fit: cover;
       }
-      .bookstep__right-bottom-intro {
-        display: flex;
-        flex-direction: column;
-        .bookstep__right-bottom-name {
-          @include txt(18px, 700, 27px, #353945);
-          font-family: $font-family;
-        }
-        .bookstep__right-bottom-position {
-          @include txt(18px, 400, 32px, #777e90);
-        }
+    }
+    .bookstep__right-bottom-intro {
+      display: flex;
+      flex-direction: column;
+      .bookstep__right-bottom-name {
+        @include txt(18px, 700, 27px, #353945);
+        font-family: $font-family;
+      }
+      .bookstep__right-bottom-position {
+        @include txt(18px, 400, 32px, #777e90);
       }
     }
   }
 }
+
 .tripbooking {
+  padding: 70px;
+  background-color: #eaf0ff;
   .tripbooking__block {
     padding: 71px 135px;
     display: flex;
     justify-content: space-between;
     gap: 112px;
 
-    background-color: #eaf0ff;
-  }
-  .tripbooking__left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 50px;
-    .tripbooking__left-text {
+    .tripbooking__left {
       display: flex;
-      width: 527px;
       flex-direction: column;
       align-items: flex-start;
-      gap: 24px;
-      .tripbooking__left-title {
-        @include txt(40px, 700, 60px, #23262f);
-        font-family: $font-family;
-        letter-spacing: -0.4px;
-      }
-      .tripbooking__left-desc {
-        @include txt(16px, 400, 24px, #353945);
-        font-family: $font-family;
-      }
-    }
-    .tripbooking__cards {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      .tripbooking__card {
-        padding: 22px;
-        margin: 0 auto;
-        background-color: #fff;
+      justify-content: center;
+      gap: 50px;
+      .tripbooking__left-text {
         display: flex;
+        width: 527px;
         flex-direction: column;
-        justify-content: center;
         align-items: flex-start;
-        gap: 10px;
-        border-radius: 10px;
-        border: 1.106px solid #f4f5f6;
-        box-shadow: 0px 2.213px 8.851px 0px rgba(15, 15, 15, 0.08);
-        .tripbooking__brand-logo {
-          width: 22px;
-          height: 22px;
-        }
-        .tripbooking__brand-title {
-          @include txt(14px, 600, normal, #353945);
+        gap: 24px;
+        .tripbooking__left-title {
+          @include txt(40px, 700, 60px, #23262f);
           font-family: $font-family;
+          letter-spacing: -0.4px;
         }
-        .tripbooking__brand-text {
-          @include txt(11px, 500, 16.596px, #777e90);
-          text-align: left;
-          max-width: 114px;
+        .tripbooking__left-desc {
+          @include txt(16px, 400, 24px, #353945);
           font-family: $font-family;
         }
       }
-    }
-  }
-  .tripbooking__right {
-    display: flex;
-    padding: 31px 24px 29px 24px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 30px;
-    background-color: #fff;
-    box-shadow: 0px 14px 40px -15px rgba(15, 15, 15, 0.08);
-    .tripbooking__right-cards {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 24px;
-      .tripbooking__right-info {
+      .tripbooking__cards {
         display: flex;
         align-items: center;
-        gap: 17px;
-        .tripbooking__right-linkselect {
-          width: 40px;
-          height: 40px;
-        }
-        .tripbooking__right-intro {
-          .tripbooking__right-name {
-            @include txt(20px, 700, normal, #353945);
+        gap: 20px;
+        .tripbooking__card {
+          padding: 22px;
+          margin: 0 auto;
+          background-color: #fff;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 10px;
+          border-radius: 10px;
+          border: 1.106px solid #f4f5f6;
+          box-shadow: 0px 2.213px 8.851px 0px rgba(15, 15, 15, 0.08);
+          .tripbooking__brand-logo {
+            width: 22px;
+            height: 22px;
+          }
+          .tripbooking__brand-title {
+            @include txt(14px, 600, normal, #353945);
             font-family: $font-family;
           }
-          .tripbooking__right-select {
-            @include txt(14px, 500, 20px, #777e90);
+          .tripbooking__brand-text {
+            @include txt(11px, 500, 16.596px, #777e90);
+            text-align: left;
+            max-width: 114px;
             font-family: $font-family;
           }
         }
       }
-      .tripbooking__right-wrap {
+    }
+    .tripbooking__right {
+      display: flex;
+      padding: 31px 24px 29px 24px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 30px;
+      background-color: #fff;
+      box-shadow: 0px 14px 40px -15px rgba(15, 15, 15, 0.08);
+      .tripbooking__right-cards {
         display: flex;
-        width: 326px;
-        padding: 20px;
-        align-items: flex-start;
         flex-direction: column;
-        gap: 20px;
-        border-radius: 23px;
-        background-color: #ececec;
-        .tripbooking__right-card {
-          width: 244px;
-          height: 124px;
+        align-items: flex-start;
+        gap: 24px;
+        .tripbooking__right-info {
+          display: flex;
+          align-items: center;
+          gap: 17px;
+          .tripbooking__right-linkselect {
+            img {
+              width: 40px;
+              height: 40px;
+              object-fit: cover;
+            }
+          }
+          .tripbooking__right-intro {
+            .tripbooking__right-name {
+              @include txt(20px, 700, normal, #353945);
+              font-family: $font-family;
+            }
+            .tripbooking__right-select {
+              @include txt(14px, 500, 20px, #777e90);
+              font-family: $font-family;
+            }
+          }
+        }
+        .tripbooking__right-wrap {
+          position: relative;
+          display: flex;
+          width: 326px;
+          padding: 20px;
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 20px;
+          border-radius: 23px;
+          background-color: #ececec;
+          .tripbooking__right-card {
+            width: 244px;
+            height: 124px;
+          }
+          .tripbooking__book {
+            position: absolute;
+            top: 108px;
+            right: 9px;
+          }
         }
       }
     }
   }
 }
+
 .works {
   .works__contents {
     padding: 70px 0;
@@ -640,10 +681,12 @@
           align-items: center;
           gap: 14px;
           .profile__info-ava {
-            width: 80px;
-            height: 80px;
-            flex-shrink: 0;
-            object-fit: cover;
+            img {
+              width: 80px;
+              height: 80px;
+
+              object-fit: cover;
+            }
           }
           .profile__info-title {
             display: flex;
@@ -716,7 +759,10 @@
           .card__content-mask {
             width: 290px;
             height: 267px;
-            object-fit: cover;
+
+            img {
+              object-fit: cover;
+            }
           }
         }
         .card__content-bottom {
@@ -728,7 +774,10 @@
             align-items: center;
             gap: 14px;
             .card__content-bottom-ava {
-              width: 80px;
+              img {
+                object-fit: cover;
+                width: 80px;
+              }
             }
             .card__content-bottom-see {
               @include txt(12px, 500, normal, #777e90);
@@ -770,6 +819,9 @@
         }
         .Travellers__ava {
           width: 148px;
+          img {
+            object-fit: cover;
+          }
         }
       }
     }
@@ -1004,6 +1056,7 @@
   }
 }
 .features {
+  padding: 70px 0;
   .features__contents {
     display: flex;
     flex-direction: column;
@@ -1021,6 +1074,7 @@
       gap: 56px;
       .features__row {
         display: flex;
+        justify-content: space-between;
         gap: 317px;
         align-items: flex-start;
         .features__plan1 {
@@ -1076,6 +1130,7 @@
       }
       .features__row1 {
         display: flex;
+        justify-content: space-between;
         gap: 252px;
         align-items: flex-start;
         .features__plan3 {
@@ -1133,115 +1188,143 @@
   }
 }
 .planning {
-  display: flex;
-  padding: 100px 135px 0px 135px;
-  justify-content: space-between;
+  position: relative;
+  // z-index: -2;
+  padding: 100px 0 0;
+
   background-color: rgba(251, 246, 199, 0.8);
-  .planning__left {
-    display: flex;
-    padding-top: 65px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    .planning__left-title {
-      @include txt(40px, 700, 60px, #141416);
-      font-family: $font-family;
-      letter-spacing: -0.4px;
-      max-width: 340px;
-    }
-    .planning__left-desc {
-      @include txt(18px, 400, 32px, #353945);
-      font-family: $font-family;
-      max-width: 529px;
-    }
-    .planning__left-button {
-      @include txt(14px, 700, 21px, #ffffff);
-      padding: 9px 29px 8px 28px;
-      border-radius: 6px;
-      background: #3b71fe;
-    }
-  }
-  .planning__right {
-    position: relative;
-    .planning__right-cards {
+  .planning__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // display: flex;
+    // justify-content: space-between;
+    .planning__left {
       display: flex;
-      padding: 30px 36px;
+      padding-top: 65px;
       flex-direction: column;
-      justify-content: center;
-      gap: 16px;
-      border-radius: 24px 24px 0px 0px;
-      background: #fff;
-      .planning__card {
-        display: flex;
-        padding: 10px 14px;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 10px;
-        border: 0.5px solid #d3d3d3;
-        background: #fff;
-        box-shadow: 0px 4px 10px 0px rgba(15, 15, 15, 0.12);
-        .planning__card-left {
-          display: flex;
-          align-items: flex-start;
-          gap: 10px;
-          .planning__card-left-btn {
-            width: 32px;
-            height: 32px;
-            object-fit: cover;
-          }
-          .planning__card-left-text {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 5px;
-            .planning__card-text-title {
-              @include txt(12px, 500, normal, #353945);
-              font-family: $font-family;
-            }
-            .planning__card-left-text-info {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-              .planning__card-left-info {
-                display: flex;
-                align-items: center;
-                gap: 6px;
-                .planning__card-left-info-ava {
-                  width: 10px;
-                  height: 10px;
-                  object-fit: cover;
-                }
-                .planning__card-left-text-name {
-                  @include txt(8px, 500, normal, #777e90);
-                  font-family: $font-family;
-                }
-              }
-              .planning__card-left-time {
-                @include txt(6px, 500, 8px, #ff6370);
-                font-family: $font-family;
-                display: flex;
-                padding: 2px 7px 2px 6px;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-                border-radius: 3px;
-                background-color: #f4f5f9;
-              }
-            }
+      align-items: flex-start;
+      gap: 24px;
+      .planning__left-title {
+        @include txt(40px, 700, 60px, #141416);
+        font-family: $font-family;
+        letter-spacing: -0.4px;
+        max-width: 340px;
+      }
+      .planning__left-desc {
+        @include txt(18px, 400, 32px, #353945);
+        font-family: $font-family;
+        max-width: 529px;
+      }
+      .planning__left-button {
+        @include txt(14px, 700, 21px, #ffffff);
+        padding: 9px 29px 8px 28px;
+        border-radius: 6px;
+        background: #3b71fe;
+      }
+    }
+    .planning__right {
+      .planning__right-wrapper {
+        position: relative;
+        padding-top: 160px;
+        max-width: 440px;
+        margin-left: auto;
+        .planning__right-img {
+          position: absolute;
+          width: 376px;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 1;
+          img {
+            width: 100%;
+            height: auto;
           }
         }
-        .planning__card-right {
+        .planning__right-cards {
           display: flex;
-          align-items: center;
+          padding: 30px 36px;
+          flex-direction: column;
           justify-content: center;
-          width: 54px;
-          height: 20px;
-          flex-shrink: 0;
-          border-radius: 4px;
-          background-color: #fee9dd;
-          .planning__card-right-btn {
-            @include txt(7px, 500, normal, #fa8f54);
-            font-family: $font-family;
+          gap: 16px;
+          border-radius: 24px 24px 0px 0px;
+          background: #fff;
+          position: relative;
+          z-index: 2;
+
+          .planning__card {
+            display: flex;
+            padding: 10px 14px;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+            border: 0.5px solid #d3d3d3;
+            background: #fff;
+            box-shadow: 0px 4px 10px 0px rgba(15, 15, 15, 0.12);
+            .planning__card-left {
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+              .planning__card-left-btn {
+                width: 32px;
+                height: 32px;
+                object-fit: cover;
+              }
+              .planning__card-left-text {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+                .planning__card-text-title {
+                  @include txt(12px, 500, normal, #353945);
+                  font-family: $font-family;
+                }
+                .planning__card-left-text-info {
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  .planning__card-left-info {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    .planning__card-left-info-ava {
+                      width: 10px;
+                      height: 10px;
+                      object-fit: cover;
+                    }
+                    .planning__card-left-text-name {
+                      @include txt(8px, 500, normal, #777e90);
+                      font-family: $font-family;
+                    }
+                  }
+                  .planning__card-left-time {
+                    @include txt(6px, 500, 8px, #ff6370);
+                    font-family: $font-family;
+                    display: flex;
+                    padding: 2px 7px 2px 6px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    border-radius: 3px;
+                    background-color: #f4f5f9;
+                  }
+                }
+              }
+            }
+            .planning__card-right {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 54px;
+              height: 20px;
+              flex-shrink: 0;
+              border-radius: 4px;
+              background-color: #fee9dd;
+              cursor: pointer;
+              .planning__card-right-btn {
+                @include txt(7px, 500, normal, #fa8f54);
+                font-family: $font-family;
+              }
+            }
           }
         }
       }
@@ -1253,92 +1336,121 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 68px 170px;
+  padding: 68px 0;
   gap: 40px;
-  .footer__top {
-    width: 100%;
+  .footer__block {
     display: flex;
-    padding-bottom: 71px;
-    border-bottom: 1px #e6e8ec;
-    align-items: flex-start;
-    justify-content: space-between;
-    .footer__contents-left {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 35px;
+    gap: 40px;
+
+    .footer__top {
+      width: 100%;
       display: flex;
-      flex-direction: column;
+      padding-bottom: 71px;
+      border-bottom: 1px #e6e8ec;
       align-items: flex-start;
-      gap: 40px;
-      max-width: 268px;
-      .footer__contents-left-text {
+      justify-content: space-between;
+      .footer__contents-left {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 30px;
-        .footer__contents-left-desc {
-          @include txt(16px, 400, 24px, #353945);
-          font-family: $font-family;
-        }
-        .footer__contents-left-input {
+        gap: 40px;
+        max-width: 268px;
+        .footer__contents-left-text {
           display: flex;
-          padding: 8px 8px 8px 26px;
-          justify-content: space-between;
-          border-radius: 24px;
-          border: 2px solid #e6e8ec;
-          .input__name {
-            width: 100%;
-            border: none;
-            .input__name::placeholder {
-              @include txt(16px, 500, 24px, #b1b5c3);
-              font-family: $font-family;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 30px;
+          .footer__contents-left-desc {
+            @include txt(16px, 400, 24px, #353945);
+            font-family: $font-family;
+          }
+          .footer__contents-left-input {
+            display: flex;
+            padding: 8px 8px 8px 26px;
+            justify-content: space-between;
+            border-radius: 24px;
+            border: 2px solid #e6e8ec;
+            .input__name {
+              width: 100%;
+              border: none;
+              .input__name::placeholder {
+                @include txt(16px, 500, 24px, #b1b5c3);
+                font-family: $font-family;
+              }
+            }
+            .footer__contents-left-arrowline {
+              display: flex;
+              width: 33px;
+              height: 33px;
+              padding: 10px;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+              flex-shrink: 0;
+              border-radius: 30px;
+              background: #3b71fe;
             }
           }
-          .footer__contents-left-arrowline {
-            display: flex;
-            width: 33px;
-            height: 33px;
-            padding: 10px;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            flex-shrink: 0;
-            border-radius: 30px;
-            background: #3b71fe;
+        }
+      }
+      .footer__contents-services {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        .footer__services {
+          @include txt(24px, 500, 36px, #353945);
+          font-family: $font-family;
+        }
+        .footer__contents-links {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 14px;
+          .footer__contents-link {
+            @include txt(16px, 400, 24px, #777e90);
+            font-family: $font-family;
           }
         }
       }
     }
-    .footer__contents-services {
+    .footer__bottom {
+      width: 100%;
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 20px;
-      .footer__services {
-        @include txt(24px, 500, 36px, #353945);
+      justify-content: space-between;
+      .footer__bottom-left {
+        @include txt(14px, 400, 20px, #b1b5c3);
         font-family: $font-family;
       }
-      .footer__contents-links {
+      .footer__bottom-right {
         display: flex;
-        flex-direction: column;
         align-items: flex-start;
         gap: 14px;
-        .footer__contents-link {
-          @include txt(16px, 400, 24px, #777e90);
-          font-family: $font-family;
-        }
       }
     }
   }
-  .footer__bottom {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    .footer__bottom-left {
-      @include txt(14px, 400, 20px, #b1b5c3);
-      font-family: $font-family;
+}
+
+@media screen and (max-width: 1023.98px) {
+  .home {
+    .container {
+      width: calc(100% - 30px);
     }
-    .footer__bottom-right {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
+    .banner__header {
+      padding: 30px 15px;
+      .headbar {
+        .headbar__left {
+          img{
+            width: 66px;
+            height: 18px;
+
+          }
+        }
+      }
     }
   }
 }

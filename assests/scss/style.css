@@ -48,6 +48,8 @@ a {
 }
 
 .container {
+  width: calc(100% - 48px);
+  padding: 0 24px;
   max-width: 1170px;
   margin: 0 auto;
 }
@@ -148,6 +150,12 @@ a {
   font-weight: 800;
   line-height: normal;
   color: #353945;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
   font-family: "Inter", sans-serif;
   text-align: left;
 }
@@ -159,6 +167,12 @@ a {
   font-weight: 500;
   line-height: 28px;
   color: #777e90;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
   font-family: "Inter", sans-serif;
   max-width: 455px;
   text-align: left;
@@ -266,7 +280,9 @@ a {
   top: 125px;
   right: 94px;
 }
-.banner .banner__contents .banner__content-right .banner__img {
+.banner .banner__contents .banner__content-right .banner__img img {
+  width: 967px;
+  height: 645px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -275,6 +291,7 @@ a {
   padding: 70px 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #f4f5f9;
 }
 .partners .partners__list {
@@ -286,8 +303,9 @@ a {
 .tripplanning {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  padding: 70px;
+  padding: 70px 0;
 }
 .tripplanning .tripplan {
   display: flex;
@@ -306,6 +324,12 @@ a {
   font-weight: 700;
   line-height: 60px;
   color: #23262f;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
   letter-spacing: -0.4px;
   font-family: "Inter", sans-serif;
 }
@@ -314,6 +338,12 @@ a {
   font-weight: 400;
   line-height: 32px;
   color: #353945;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
   max-width: 461px;
   font-family: "Inter", sans-serif;
 }
@@ -343,6 +373,14 @@ a {
   font-family: "Inter", sans-serif;
   text-align: center;
 }
+.tripplanning .tripplan .tripplan__cards .tripplan__card1 .tripplan__card1-explain p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
 .tripplanning .tripplan .tripplan__cards .tripplan__card1 .tripplan__card1-more {
   display: flex;
   align-items: center;
@@ -370,6 +408,14 @@ a {
   width: 210px;
   font-family: "Inter", sans-serif;
   text-align: center;
+}
+.tripplanning .tripplan .tripplan__cards .tripplan__card2 .tripplan__card2-explain p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
 }
 .tripplanning .tripplan .tripplan__cards .tripplan__card2 .tripplan__card2-more {
   display: flex;
@@ -399,6 +445,14 @@ a {
   font-family: "Inter", sans-serif;
   text-align: center;
 }
+.tripplanning .tripplan .tripplan__cards .tripplan__card3 .tripplan__card3-explain p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
 .tripplanning .tripplan .tripplan__cards .tripplan__card3 .tripplan__card3-more {
   display: flex;
   align-items: center;
@@ -408,6 +462,7 @@ a {
 
 .bookstep .bookstep__block {
   padding: 69px 0;
+  gap: 102px;
   display: flex;
   justify-content: space-between;
 }
@@ -564,7 +619,7 @@ a {
 }
 .bookstep .bookstep__right .bookstep__right-head .bookstep__right-headwrap .bookstep__right-steps .bookstep__right-text {
   display: flex;
-  width: 538px;
+  max-width: 538px;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
@@ -574,6 +629,12 @@ a {
   font-weight: 700;
   line-height: 60px;
   color: #23262f;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
   font-family: "Inter", sans-serif;
   letter-spacing: -0.4px;
 }
@@ -582,85 +643,107 @@ a {
   font-weight: 500;
   line-height: 20px;
   color: #353945;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  max-width: 538px;
   font-family: "Inter", sans-serif;
   text-align: left;
 }
-.bookstep .bookstep__right .bookstep__right-head .bookstep__right-headwrap .bookstep__right-steps .bookstep__right-menu {
+.bookstep .bookstep__right .bookstep__right-head .bookstep__right-headwrap .bookstep__right-menu {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
 }
-.bookstep .bookstep__right .bookstep__right-head .bookstep__right-headwrap .bookstep__right-steps .bookstep__right-menu .bookstep__right-choice {
+.bookstep .bookstep__right .bookstep__right-head .bookstep__right-headwrap .bookstep__right-menu .bookstep__right-choice {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.bookstep .bookstep__right .bookstep__right-head .bookstep__right-headwrap .bookstep__right-steps .bookstep__right-menu .bookstep__right-choice .bookstep__right-choice-for {
+.bookstep .bookstep__right .bookstep__right-head .bookstep__right-headwrap .bookstep__right-menu .bookstep__right-choice .bookstep__right-choice-for {
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
   color: #353945;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
   font-family: "Inter", sans-serif;
 }
-.bookstep .bookstep__right .bookstep__right-head .bookstep__right-headwrap .bookstep__right-advice {
+.bookstep .bookstep__right .bookstep__right-head .bookstep__right-advice {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: #353945;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
   font-family: "Inter", sans-serif;
 }
-.bookstep .bookstep__right .bookstep__right-bottom {
+.bookstep .bookstep__right-bottom {
   display: flex;
   align-items: center;
   gap: 14px;
 }
-.bookstep .bookstep__right .bookstep__right-bottom .bookstep__right-ava {
+.bookstep .bookstep__right-bottom .bookstep__right-ava img {
   width: 70px;
   height: 70px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.bookstep .bookstep__right .bookstep__right-bottom .bookstep__right-bottom-intro {
+.bookstep .bookstep__right-bottom .bookstep__right-bottom-intro {
   display: flex;
   flex-direction: column;
 }
-.bookstep .bookstep__right .bookstep__right-bottom .bookstep__right-bottom-intro .bookstep__right-bottom-name {
+.bookstep .bookstep__right-bottom .bookstep__right-bottom-intro .bookstep__right-bottom-name {
   font-size: 18px;
   font-weight: 700;
   line-height: 27px;
   color: #353945;
   font-family: "Inter", sans-serif;
 }
-.bookstep .bookstep__right .bookstep__right-bottom .bookstep__right-bottom-intro .bookstep__right-bottom-position {
+.bookstep .bookstep__right-bottom .bookstep__right-bottom-intro .bookstep__right-bottom-position {
   font-size: 18px;
   font-weight: 400;
   line-height: 32px;
   color: #777e90;
 }
 
+.tripbooking {
+  padding: 70px;
+  background-color: #eaf0ff;
+}
 .tripbooking .tripbooking__block {
   padding: 71px 135px;
   display: flex;
   justify-content: space-between;
   gap: 112px;
-  background-color: #eaf0ff;
 }
-.tripbooking .tripbooking__left {
+.tripbooking .tripbooking__block .tripbooking__left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 50px;
 }
-.tripbooking .tripbooking__left .tripbooking__left-text {
+.tripbooking .tripbooking__block .tripbooking__left .tripbooking__left-text {
   display: flex;
   width: 527px;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
 }
-.tripbooking .tripbooking__left .tripbooking__left-text .tripbooking__left-title {
+.tripbooking .tripbooking__block .tripbooking__left .tripbooking__left-text .tripbooking__left-title {
   font-size: 40px;
   font-weight: 700;
   line-height: 60px;
@@ -668,19 +751,19 @@ a {
   font-family: "Inter", sans-serif;
   letter-spacing: -0.4px;
 }
-.tripbooking .tripbooking__left .tripbooking__left-text .tripbooking__left-desc {
+.tripbooking .tripbooking__block .tripbooking__left .tripbooking__left-text .tripbooking__left-desc {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: #353945;
   font-family: "Inter", sans-serif;
 }
-.tripbooking .tripbooking__left .tripbooking__cards {
+.tripbooking .tripbooking__block .tripbooking__left .tripbooking__cards {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.tripbooking .tripbooking__left .tripbooking__cards .tripbooking__card {
+.tripbooking .tripbooking__block .tripbooking__left .tripbooking__cards .tripbooking__card {
   padding: 22px;
   margin: 0 auto;
   background-color: #fff;
@@ -693,18 +776,18 @@ a {
   border: 1.106px solid #f4f5f6;
   box-shadow: 0px 2.213px 8.851px 0px rgba(15, 15, 15, 0.08);
 }
-.tripbooking .tripbooking__left .tripbooking__cards .tripbooking__card .tripbooking__brand-logo {
+.tripbooking .tripbooking__block .tripbooking__left .tripbooking__cards .tripbooking__card .tripbooking__brand-logo {
   width: 22px;
   height: 22px;
 }
-.tripbooking .tripbooking__left .tripbooking__cards .tripbooking__card .tripbooking__brand-title {
+.tripbooking .tripbooking__block .tripbooking__left .tripbooking__cards .tripbooking__card .tripbooking__brand-title {
   font-size: 14px;
   font-weight: 600;
   line-height: normal;
   color: #353945;
   font-family: "Inter", sans-serif;
 }
-.tripbooking .tripbooking__left .tripbooking__cards .tripbooking__card .tripbooking__brand-text {
+.tripbooking .tripbooking__block .tripbooking__left .tripbooking__cards .tripbooking__card .tripbooking__brand-text {
   font-size: 11px;
   font-weight: 500;
   line-height: 16.596px;
@@ -713,7 +796,7 @@ a {
   max-width: 114px;
   font-family: "Inter", sans-serif;
 }
-.tripbooking .tripbooking__right {
+.tripbooking .tripbooking__block .tripbooking__right {
   display: flex;
   padding: 31px 24px 29px 24px;
   justify-content: center;
@@ -723,36 +806,39 @@ a {
   background-color: #fff;
   box-shadow: 0px 14px 40px -15px rgba(15, 15, 15, 0.08);
 }
-.tripbooking .tripbooking__right .tripbooking__right-cards {
+.tripbooking .tripbooking__block .tripbooking__right .tripbooking__right-cards {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
 }
-.tripbooking .tripbooking__right .tripbooking__right-cards .tripbooking__right-info {
+.tripbooking .tripbooking__block .tripbooking__right .tripbooking__right-cards .tripbooking__right-info {
   display: flex;
   align-items: center;
   gap: 17px;
 }
-.tripbooking .tripbooking__right .tripbooking__right-cards .tripbooking__right-info .tripbooking__right-linkselect {
+.tripbooking .tripbooking__block .tripbooking__right .tripbooking__right-cards .tripbooking__right-info .tripbooking__right-linkselect img {
   width: 40px;
   height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.tripbooking .tripbooking__right .tripbooking__right-cards .tripbooking__right-info .tripbooking__right-intro .tripbooking__right-name {
+.tripbooking .tripbooking__block .tripbooking__right .tripbooking__right-cards .tripbooking__right-info .tripbooking__right-intro .tripbooking__right-name {
   font-size: 20px;
   font-weight: 700;
   line-height: normal;
   color: #353945;
   font-family: "Inter", sans-serif;
 }
-.tripbooking .tripbooking__right .tripbooking__right-cards .tripbooking__right-info .tripbooking__right-intro .tripbooking__right-select {
+.tripbooking .tripbooking__block .tripbooking__right .tripbooking__right-cards .tripbooking__right-info .tripbooking__right-intro .tripbooking__right-select {
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
   color: #777e90;
   font-family: "Inter", sans-serif;
 }
-.tripbooking .tripbooking__right .tripbooking__right-cards .tripbooking__right-wrap {
+.tripbooking .tripbooking__block .tripbooking__right .tripbooking__right-cards .tripbooking__right-wrap {
+  position: relative;
   display: flex;
   width: 326px;
   padding: 20px;
@@ -762,9 +848,14 @@ a {
   border-radius: 23px;
   background-color: #ececec;
 }
-.tripbooking .tripbooking__right .tripbooking__right-cards .tripbooking__right-wrap .tripbooking__right-card {
+.tripbooking .tripbooking__block .tripbooking__right .tripbooking__right-cards .tripbooking__right-wrap .tripbooking__right-card {
   width: 244px;
   height: 124px;
+}
+.tripbooking .tripbooking__block .tripbooking__right .tripbooking__right-cards .tripbooking__right-wrap .tripbooking__book {
+  position: absolute;
+  top: 108px;
+  right: 9px;
 }
 
 .works .works__contents {
@@ -794,10 +885,9 @@ a {
   align-items: center;
   gap: 14px;
 }
-.works .works__contents .works__left .works__profile .profile__info .profile__info-ava {
+.works .works__contents .works__left .works__profile .profile__info .profile__info-ava img {
   width: 80px;
   height: 80px;
-  flex-shrink: 0;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -885,6 +975,8 @@ a {
 .works .works__contents .works__left .works__card .card__content-title .card__content-mask {
   width: 290px;
   height: 267px;
+}
+.works .works__contents .works__left .works__card .card__content-title .card__content-mask img {
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -898,7 +990,9 @@ a {
   align-items: center;
   gap: 14px;
 }
-.works .works__contents .works__left .works__card .card__content-bottom .card__content-bottom-left .card__content-bottom-ava {
+.works .works__contents .works__left .works__card .card__content-bottom .card__content-bottom-left .card__content-bottom-ava img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 80px;
 }
 .works .works__contents .works__left .works__card .card__content-bottom .card__content-bottom-left .card__content-bottom-see {
@@ -947,6 +1041,10 @@ a {
 }
 .works .works__contents .works__left .works__travellers .Travellers__ava {
   width: 148px;
+}
+.works .works__contents .works__left .works__travellers .Travellers__ava img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .works .works__contents .works__right {
   display: flex;
@@ -1218,6 +1316,9 @@ a {
   font-family: "Inter", sans-serif;
 }
 
+.features {
+  padding: 70px 0;
+}
 .features .features__contents {
   display: flex;
   flex-direction: column;
@@ -1240,6 +1341,7 @@ a {
 }
 .features .features__contents .features__contents-our .features__row {
   display: flex;
+  justify-content: space-between;
   gap: 317px;
   align-items: flex-start;
 }
@@ -1309,6 +1411,7 @@ a {
 }
 .features .features__contents .features__contents-our .features__row1 {
   display: flex;
+  justify-content: space-between;
   gap: 252px;
   align-items: flex-start;
 }
@@ -1378,19 +1481,22 @@ a {
 }
 
 .planning {
-  display: flex;
-  padding: 100px 135px 0px 135px;
-  justify-content: space-between;
+  position: relative;
+  padding: 100px 0 0;
   background-color: rgba(251, 246, 199, 0.8);
 }
-.planning .planning__left {
+.planning .planning__wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.planning .planning__wrap .planning__left {
   display: flex;
   padding-top: 65px;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
 }
-.planning .planning__left .planning__left-title {
+.planning .planning__wrap .planning__left .planning__left-title {
   font-size: 40px;
   font-weight: 700;
   line-height: 60px;
@@ -1399,7 +1505,7 @@ a {
   letter-spacing: -0.4px;
   max-width: 340px;
 }
-.planning .planning__left .planning__left-desc {
+.planning .planning__wrap .planning__left .planning__left-desc {
   font-size: 18px;
   font-weight: 400;
   line-height: 32px;
@@ -1407,7 +1513,7 @@ a {
   font-family: "Inter", sans-serif;
   max-width: 529px;
 }
-.planning .planning__left .planning__left-button {
+.planning .planning__wrap .planning__left .planning__left-button {
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;
@@ -1416,10 +1522,25 @@ a {
   border-radius: 6px;
   background: #3b71fe;
 }
-.planning .planning__right {
+.planning .planning__wrap .planning__right .planning__right-wrapper {
   position: relative;
+  padding-top: 160px;
+  max-width: 440px;
+  margin-left: auto;
 }
-.planning .planning__right .planning__right-cards {
+.planning .planning__wrap .planning__right .planning__right-wrapper .planning__right-img {
+  position: absolute;
+  width: 376px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.planning .planning__wrap .planning__right .planning__right-wrapper .planning__right-img img {
+  width: 100%;
+  height: auto;
+}
+.planning .planning__wrap .planning__right .planning__right-wrapper .planning__right-cards {
   display: flex;
   padding: 30px 36px;
   flex-direction: column;
@@ -1427,8 +1548,10 @@ a {
   gap: 16px;
   border-radius: 24px 24px 0px 0px;
   background: #fff;
+  position: relative;
+  z-index: 2;
 }
-.planning .planning__right .planning__right-cards .planning__card {
+.planning .planning__wrap .planning__right .planning__right-wrapper .planning__right-cards .planning__card {
   display: flex;
   padding: 10px 14px;
   justify-content: space-between;
@@ -1438,54 +1561,54 @@ a {
   background: #fff;
   box-shadow: 0px 4px 10px 0px rgba(15, 15, 15, 0.12);
 }
-.planning .planning__right .planning__right-cards .planning__card .planning__card-left {
+.planning .planning__wrap .planning__right .planning__right-wrapper .planning__right-cards .planning__card .planning__card-left {
   display: flex;
   align-items: flex-start;
   gap: 10px;
 }
-.planning .planning__right .planning__right-cards .planning__card .planning__card-left .planning__card-left-btn {
+.planning .planning__wrap .planning__right .planning__right-wrapper .planning__right-cards .planning__card .planning__card-left .planning__card-left-btn {
   width: 32px;
   height: 32px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.planning .planning__right .planning__right-cards .planning__card .planning__card-left .planning__card-left-text {
+.planning .planning__wrap .planning__right .planning__right-wrapper .planning__right-cards .planning__card .planning__card-left .planning__card-left-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 5px;
 }
-.planning .planning__right .planning__right-cards .planning__card .planning__card-left .planning__card-left-text .planning__card-text-title {
+.planning .planning__wrap .planning__right .planning__right-wrapper .planning__right-cards .planning__card .planning__card-left .planning__card-left-text .planning__card-text-title {
   font-size: 12px;
   font-weight: 500;
   line-height: normal;
   color: #353945;
   font-family: "Inter", sans-serif;
 }
-.planning .planning__right .planning__right-cards .planning__card .planning__card-left .planning__card-left-text .planning__card-left-text-info {
+.planning .planning__wrap .planning__right .planning__right-wrapper .planning__right-cards .planning__card .planning__card-left .planning__card-left-text .planning__card-left-text-info {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.planning .planning__right .planning__right-cards .planning__card .planning__card-left .planning__card-left-text .planning__card-left-text-info .planning__card-left-info {
+.planning .planning__wrap .planning__right .planning__right-wrapper .planning__right-cards .planning__card .planning__card-left .planning__card-left-text .planning__card-left-text-info .planning__card-left-info {
   display: flex;
   align-items: center;
   gap: 6px;
 }
-.planning .planning__right .planning__right-cards .planning__card .planning__card-left .planning__card-left-text .planning__card-left-text-info .planning__card-left-info .planning__card-left-info-ava {
+.planning .planning__wrap .planning__right .planning__right-wrapper .planning__right-cards .planning__card .planning__card-left .planning__card-left-text .planning__card-left-text-info .planning__card-left-info .planning__card-left-info-ava {
   width: 10px;
   height: 10px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.planning .planning__right .planning__right-cards .planning__card .planning__card-left .planning__card-left-text .planning__card-left-text-info .planning__card-left-info .planning__card-left-text-name {
+.planning .planning__wrap .planning__right .planning__right-wrapper .planning__right-cards .planning__card .planning__card-left .planning__card-left-text .planning__card-left-text-info .planning__card-left-info .planning__card-left-text-name {
   font-size: 8px;
   font-weight: 500;
   line-height: normal;
   color: #777e90;
   font-family: "Inter", sans-serif;
 }
-.planning .planning__right .planning__right-cards .planning__card .planning__card-left .planning__card-left-text .planning__card-left-text-info .planning__card-left-time {
+.planning .planning__wrap .planning__right .planning__right-wrapper .planning__right-cards .planning__card .planning__card-left .planning__card-left-text .planning__card-left-text-info .planning__card-left-time {
   font-size: 6px;
   font-weight: 500;
   line-height: 8px;
@@ -1499,7 +1622,7 @@ a {
   border-radius: 3px;
   background-color: #f4f5f9;
 }
-.planning .planning__right .planning__right-cards .planning__card .planning__card-right {
+.planning .planning__wrap .planning__right .planning__right-wrapper .planning__right-cards .planning__card .planning__card-right {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1508,8 +1631,9 @@ a {
   flex-shrink: 0;
   border-radius: 4px;
   background-color: #fee9dd;
+  cursor: pointer;
 }
-.planning .planning__right .planning__right-cards .planning__card .planning__card-right .planning__card-right-btn {
+.planning .planning__wrap .planning__right .planning__right-wrapper .planning__right-cards .planning__card .planning__card-right .planning__card-right-btn {
   font-size: 7px;
   font-weight: 500;
   line-height: normal;
@@ -1522,10 +1646,18 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 68px 170px;
+  padding: 68px 0;
   gap: 40px;
 }
-.footer .footer__top {
+.footer .footer__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 35px;
+  gap: 40px;
+}
+.footer .footer__block .footer__top {
   width: 100%;
   display: flex;
   padding-bottom: 71px;
@@ -1533,52 +1665,52 @@ a {
   align-items: flex-start;
   justify-content: space-between;
 }
-.footer .footer__top .footer__contents-left {
+.footer .footer__block .footer__top .footer__contents-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 40px;
   max-width: 268px;
 }
-.footer .footer__top .footer__contents-left .footer__contents-left-text {
+.footer .footer__block .footer__top .footer__contents-left .footer__contents-left-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
 }
-.footer .footer__top .footer__contents-left .footer__contents-left-text .footer__contents-left-desc {
+.footer .footer__block .footer__top .footer__contents-left .footer__contents-left-text .footer__contents-left-desc {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: #353945;
   font-family: "Inter", sans-serif;
 }
-.footer .footer__top .footer__contents-left .footer__contents-left-text .footer__contents-left-input {
+.footer .footer__block .footer__top .footer__contents-left .footer__contents-left-text .footer__contents-left-input {
   display: flex;
   padding: 8px 8px 8px 26px;
   justify-content: space-between;
   border-radius: 24px;
   border: 2px solid #e6e8ec;
 }
-.footer .footer__top .footer__contents-left .footer__contents-left-text .footer__contents-left-input .input__name {
+.footer .footer__block .footer__top .footer__contents-left .footer__contents-left-text .footer__contents-left-input .input__name {
   width: 100%;
   border: none;
 }
-.footer .footer__top .footer__contents-left .footer__contents-left-text .footer__contents-left-input .input__name .input__name::-moz-placeholder {
+.footer .footer__block .footer__top .footer__contents-left .footer__contents-left-text .footer__contents-left-input .input__name .input__name::-moz-placeholder {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   color: #b1b5c3;
   font-family: "Inter", sans-serif;
 }
-.footer .footer__top .footer__contents-left .footer__contents-left-text .footer__contents-left-input .input__name .input__name::placeholder {
+.footer .footer__block .footer__top .footer__contents-left .footer__contents-left-text .footer__contents-left-input .input__name .input__name::placeholder {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   color: #b1b5c3;
   font-family: "Inter", sans-serif;
 }
-.footer .footer__top .footer__contents-left .footer__contents-left-text .footer__contents-left-input .footer__contents-left-arrowline {
+.footer .footer__block .footer__top .footer__contents-left .footer__contents-left-text .footer__contents-left-input .footer__contents-left-arrowline {
   display: flex;
   width: 33px;
   height: 33px;
@@ -1590,46 +1722,59 @@ a {
   border-radius: 30px;
   background: #3b71fe;
 }
-.footer .footer__top .footer__contents-services {
+.footer .footer__block .footer__top .footer__contents-services {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
 }
-.footer .footer__top .footer__contents-services .footer__services {
+.footer .footer__block .footer__top .footer__contents-services .footer__services {
   font-size: 24px;
   font-weight: 500;
   line-height: 36px;
   color: #353945;
   font-family: "Inter", sans-serif;
 }
-.footer .footer__top .footer__contents-services .footer__contents-links {
+.footer .footer__block .footer__top .footer__contents-services .footer__contents-links {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 14px;
 }
-.footer .footer__top .footer__contents-services .footer__contents-links .footer__contents-link {
+.footer .footer__block .footer__top .footer__contents-services .footer__contents-links .footer__contents-link {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: #777e90;
   font-family: "Inter", sans-serif;
 }
-.footer .footer__bottom {
+.footer .footer__block .footer__bottom {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.footer .footer__bottom .footer__bottom-left {
+.footer .footer__block .footer__bottom .footer__bottom-left {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   color: #b1b5c3;
   font-family: "Inter", sans-serif;
 }
-.footer .footer__bottom .footer__bottom-right {
+.footer .footer__block .footer__bottom .footer__bottom-right {
   display: flex;
   align-items: flex-start;
   gap: 14px;
+}
+
+@media screen and (max-width: 1023.98px) {
+  .home .container {
+    width: calc(100% - 30px);
+  }
+  .home .banner__header {
+    padding: 30px 15px;
+  }
+  .home .banner__header .headbar .headbar__left img {
+    width: 66px;
+    height: 18px;
+  }
 }/*# sourceMappingURL=style.css.map */
